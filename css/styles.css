@@ -12,6 +12,11 @@ html {
     width: 100%;
 }
 
+.translatedUp {
+    -webkit-transform: translateY(-2%);
+    transform: translateY(-2%);
+}
+
 a .navbar-brand {
     color: #ffd8c4;
 }
@@ -21,16 +26,20 @@ a .navbar-brand {
 }
 
 .navbar-light-beige .nav-link {
-    color: grey !important;
+    color: rgb(0, 157, 136) !important;
 }
 
 .navbar-light-beige .nav-link:hover {
-    color: darkgrey !important;
+    color: #0c5b55 !important;
 }
 
-
 .navbar-light-beige .nav-item .active {
-    color:darkgrey;
+    color: #0c5b55;
+}
+
+.navbar-nav .nav-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .btn-docto-sticky {
@@ -76,57 +85,60 @@ a .navbar-brand {
     width: 100%;
     height: 100vh;
     margin: 0 auto -0.2em;
+    background: url("../images/osteofade2.png") no-repeat center center;
+    background-size: cover;
     display:flex;
     justify-content:center;
     align-items:center;
-    background: url("../images/osteofade2.png") no-repeat center center;
-    background-size: cover;
 }
 
 .home h1 {
-    //color: #ffd8c4;
-    color: black;
+    color: rgb(0, 157, 136);
     font-family: monospace;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
     letter-spacing: .15em;
     animation:
-            typing 3.5s steps(30, end),
+            typing 2s steps(30, end),
             blink-caret .5s step-end infinite;
 }
 
-.home h1 span {
-    color: red;
+.home h2 {
+    color: black;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .15em;
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 70vw; }
+    to { width: 39vw; }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: #ffd8c4 }
 }
 
 .informations {
-    background-color: white;
     width: 90%;
     height: 20vh;
     display: flex;
     justify-content:center;
     align-items:center;
     margin: -0 auto 2em;
+    border-radius: 0.5rem;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .informations .card-deck .card {
-    margin: 0;
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-    -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 0 10px 6px -6px #777;
+    margin-right: 1rem;
+    -webkit-box-shadow: 0 10px 6px -6px rgba(0, 157, 136, 0.6);
+    -moz-box-shadow: 0 10px 6px -6px rgba(0, 157, 136, 0.6);
+    box-shadow: 0 10px 6px -6px rgba(0, 157, 136, 0.6);
 }
 
 .informations .card-body .card-title {
@@ -157,6 +169,7 @@ a .navbar-brand {
     justify-content:center;
     align-items:center;
     margin: 0 auto;
+    padding-bottom: 2rem;
 }
 
 .services .card-wrapper {
@@ -166,7 +179,7 @@ a .navbar-brand {
 
 .services .card {
     border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 157, 136, 0.6);
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -180,7 +193,7 @@ a .navbar-brand {
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 157, 136, 0.6);
     opacity: 0;
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -207,76 +220,52 @@ a .navbar-brand {
 .team {
     display: flex;
     background-color: #ffd8c4;
-    height: 70vh;
+    height: 90vh;
 }
 
 .team .img-left {
     object-fit: cover;
     max-width: 40vw;
     width: 40vw;
+    border-right: rgb(0, 157, 136) 0.5rem solid
 }
 
 .team .right-half {
     max-width: 58vw;
     width: 58vw;
     position: relative;
-    color: white;
 }
 
 .team .right-half::after {
     content: " ";
-    left: -5vh;
-    top: 30vh;
+    left: -6vh;
+    top: 40vh;
     position: absolute;
     border-top: 6vh solid transparent;
-    border-right: 6vh solid #ffd8c4;
+    border-right: 6vh solid rgb(0, 157, 136);
     border-bottom: 6vh solid transparent;
 }
 
 .team .right-half .wrapper {
     margin-left: 4em;
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 .team .right-half .wrapper .upper-block {
-    margin-bottom: 3vh;
     font-size: 3em;
+    font-family: 'Courier New', monospace;
+    color: rgb(0, 157, 136)
 }
 
 .team .right-half .wrapper .middle-block {
-    margin-bottom: 3vh;
-    font-size: 1.5em;
-}
-
-
-.team .carousel-item {
-    width: 100%; /*width you want*/
-    height: 70vh; /*height you want*/
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.team .carousel, .slide {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.team .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.team .carousel-item .inside-carousel {
-    color: black;
-    background-color: rgba(255,216,196,0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 0 0 0 0.5rem;
+    font-size: 1.2em;
 }
 
 .team .card {
     border-radius: 5px;
     margin-left: 1vw;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 157, 136, 0.6);
     height: 70vh;
 }
 
@@ -294,18 +283,127 @@ a .navbar-brand {
 .transparent {
     display: flex;
     height: 70vh;
-    background-color: rgba(255, 216, 196, 0.5);
 }
 
 .footer {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-.navbar-nav .nav-item {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.main-infos{
+    display: flex;
+    height: 70vh;
+    margin: 2% 5% 2% 5%;
+}
+
+.main-infos .left {
+    flex: 5%;
+}
+
+.main-infos .right {
+    flex: 5%;
+}
+
+.main-infos .info-prestations-container {
+    display: flex;
+    padding: 2% 3% 2% 3%;
+    flex: 90%;
+    border-radius: 1rem;
+    background: linear-gradient(110deg, rgb(255,216,196) 60%, rgb(255, 173, 131) 60%);
+}
+
+.main-infos .info-prestations-container .left {
+    flex: 52%;
+    font-size: 1.3rem;
+    text-align: justify;
+    text-justify: auto;
+}
+
+.main-infos .info-prestations-container .left ul{
+    list-style-type: "- ";
+}
+
+.main-infos .info-prestations-container .left .name {
+    font-family: 'Courier New', monospace;
+    font-size: 2.2rem;
+    color: rgb(0, 157, 136);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0.8rem 0 0.2rem 0;
+}
+
+.main-infos .info-prestations-container .left .filler {
+    height: 0.5vh;
+    border-radius: 1rem;
+    background-color: rgb(0, 157, 136);
+    margin-bottom: 1rem;
+}
+
+.main-infos .info-prestations-container .separator {
+    flex: 3%;
+}
+
+.main-infos .info-prestations-container .right {
+    margin: 7% 0 7% 0;
+    flex: 45%;
+}
+
+.main-infos .info-prestations-container .right img{
+    max-width:100%;
+    max-height:100%;
+    border-radius: 1rem;
+    border: rgb(255,216,196) 0.5rem solid
+}
+
+.text-block {
+    margin-bottom: 1rem;
+}
+
+#collapseKine {
+    border-top: rgb(0, 157, 136) 0.5rem solid;
+    border-bottom: rgb(0, 157, 136) 0.5rem solid;
+}
+
+#collapseKine .info-prestations-container::before {
+    content: " ";
+    left: 25vh;
+    top: 0;
+    position: absolute;
+    border-bottom: 7vh solid rgb(255,216,196);
+    border-right: 7vh solid transparent;
+    border-left: 7vh solid transparent;
+}
+
+#collapseOsteo {
+    border-top: rgb(0, 157, 136) 0.5rem solid;
+    border-bottom: rgb(0, 157, 136) 0.5rem solid;
+}
+
+#collapseOsteo .info-prestations-container::before {
+    content: " ";
+    left: 70vh;
+    top: 0;
+    position: absolute;
+    border-bottom: 7vh solid rgb(255,216,196);
+    border-right: 7vh solid transparent;
+    border-left: 7vh solid transparent;
+}
+
+#collapseCabinet {
+    border-top: rgb(0, 157, 136) 0.5rem solid;
+    border-bottom: rgb(0, 157, 136) 0.5rem solid;
+}
+
+#collapseCabinet .info-prestations-container::before {
+    content: " ";
+    right: 70vh;
+    top: 0;
+    position: absolute;
+    border-bottom: 7vh solid rgb(255,216,196);
+    border-right: 7vh solid transparent;
+    border-left: 7vh solid transparent;
 }
